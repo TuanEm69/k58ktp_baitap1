@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Permutation Cipher — Hoán vị</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<link rel="stylesheet" href="style.css">
+
+<body>
+  <main class="container">
+    <h1>Permutation Cipher (Mã hoán vị)</h1>
+    <p class="lead">Chia văn bản thành khối kích thước <code>n</code>, rồi hoán vị vị trí trong mỗi khối theo khóa.</p>
+
+    <section class="card">
+      <label for="plaintext">Văn bản (Plaintext / Ciphertext)</label>
+      <textarea id="plaintext" placeholder="Nhập văn bản..."></textarea>
+
+      <div class="row">
+        <label for="blockSize">Kích thước khối (n)</label>
+        <input id="blockSize" type="number" min="2" max="10" value="5"/>
+      </div>
+
+      <div class="row">
+        <label for="permInput">Khóa (hoán vị) — nhập như: 3,1,4,2,5 (1-based)</label>
+        <input id="permInput" type="text" placeholder="Ví dụ: 3,1,4,2,5" />
+      </div>
+
+      <div class="buttons">
+        <button id="genBtn">Tạo ngẫu nhiên</button>
+        <button id="encBtn" class="primary">Mã hoá</button>
+        <button id="decBtn" class="primary">Giải mã</button>
+        <button id="bruteBtn" class="muted">Brute-force (n ≤ 7)</button>
+        <button id="clearBtn" class="muted">Xóa</button>
+      </div>
+
+      <div class="result">
+        <div class="title">Kết quả</div>
+        <pre id="resultArea" class="output"></pre>
+      </div>
+
+      <div class="result">
+        <div class="title">Brute-force / Gợi ý</div>
+        <pre id="bruteArea" class="output"></pre>
+      </div>
+
+      <div class="hint">
+        Lưu ý: Mã hoá/giải mã giữ nguyên mọi ký tự (bao gồm khoảng trắng & dấu câu) nhưng thao tác theo khối.
+        Khối cuối nếu thiếu sẽ được pad bằng chữ <code>X</code>.
+      </div>
+    </section>
+
+    <section class="card info">
+      <h3>Thông tin nhanh</h3>
+      <ul>
+        <li>Hoán vị nhập theo chỉ số 1-based (ví dụ: <code>2,3,1</code>).</li>
+        <li>Không gian khóa = n! — brute-force chỉ hợp lý khi n nhỏ.</li>
+        <li>Brute-force sẽ liệt kê các candidate; bạn cần chọn kết quả hợp lý.</li>
+      </ul>
+    </section>
+
+    <footer>Permutation cipher — demo cho mục học.</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+:root {
+  --bg: #071427;
+  --card: #0f1724;
+  --muted: #9fb0cf;
+  --accent: #60a5fa;
+  font-family: Inter, system-ui, Arial;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: linear-gradient(180deg, #041028 0%, #071427 100%);
+  color: #e6eef8;
+  padding: 28px;
+}
+.wrap {
+  width: 980px;
+  max-width: 96vw;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+  border: 1px solid rgba(255,255,255,0.03);
+}
+h1 { margin: 0 0 6px 0; font-size: 20px; }
+p.lead { margin: 0 0 12px 0; color: var(--muted); font-size: 13px; }
+.grid { display: grid; grid-template-columns: 1fr 320px; gap: 14px; align-items: start; }
+.card {
+  background: var(--card);
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.03);
+}
+label { display: block; color: var(--muted); font-size: 13px; margin-bottom: 6px; }
+textarea, input[type="text"], input[type="number"], input[type="range"] {
+  width: 100%; padding: 10px; border-radius: 8px;
+  background: transparent; color: inherit;
+  border: 1px solid rgba(255,255,255,0.04); box-sizing: border-box;
+}
+textarea { min-height: 120px; resize: vertical; }
+.key-control { margin-top: 10px; }
+.key-inputs { display: flex; gap: 8px; align-items: center; }
+.controls { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; }
+button { padding: 8px 12px; border-radius: 8px; border: 0; cursor: pointer; font-weight: 600; }
+.primary { background: var(--accent); color: #07283f; }
+.muted { background: transparent; border: 1px solid rgba(255,255,255,0.04); color: var(--muted); }
+.small { font-size: 13px; padding: 6px 10px; }
+.output {
+  white-space: pre-wrap; min-height: 100px; margin-top: 8px;
+  padding: 8px; border-radius: 8px;
+  background: rgba(255,255,255,0.01);
+  border: 1px dashed rgba(255,255,255,0.02);
+}
+.list {
+  max-height: 220px; overflow: auto; font-family: monospace;
+  margin-top: 6px; padding: 8px; border-radius: 8px;
+  background: rgba(255,255,255,0.01);
+}
+.keydisplay { font-weight: 700; padding: 6px 10px; border-radius: 8px;
+  background: rgba(255,255,255,0.01); display: inline-block; }
+footer { text-align: right; color: var(--muted); margin-top: 10px; font-size: 13px; }
+.title { font-weight: 700; margin-bottom: 6px; }
+.info { color: var(--muted); font-size: 13px; }
+.result-box { margin-top: 12px; }

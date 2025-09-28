@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Mã hóa Vigenère</title>
+  <!-- Liên kết CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Thuật toán mã hóa Vigenère</h2>
+    <textarea id="inputText" placeholder="Nhập văn bản..."></textarea>
+    <input type="text" id="key" placeholder="Nhập khóa (chữ cái)">
+    <div>
+      <button onclick="encrypt()">Mã hóa</button>
+      <button onclick="decrypt()">Giải mã</button>
+    </div>
+    <h3>Kết quả:</h3>
+    <p id="result"></p>
+  </div>
+
+  <!-- Liên kết JS -->
+  <script src="script.js"></script>
+</body>
+</html>

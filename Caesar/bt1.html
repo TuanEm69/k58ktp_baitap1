@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Caesar Cipher — Mã hoá & Giải mã</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="wrap" role="main">
+    <h1>Caesar Cipher — Mã hoá • Giải mã • Phá mã</h1>
+    <p class="lead">Nhập văn bản, chọn khóa (0–25). Có thể brute-force và phân tích tần suất.</p>
+
+    <div class="grid">
+      <div class="card">
+        <label for="txt">Văn bản (Plaintext / Ciphertext)</label>
+        <textarea id="txt" placeholder="Nhập văn bản..."></textarea>
+
+        <div class="key-control">
+          <label for="key">Khóa (shift) — <span id="kdisp" class="keydisplay">3</span></label>
+          <div class="key-inputs">
+            <input id="key" type="range" min="0" max="25" value="3" />
+            <input id="knum" type="number" min="0" max="25" value="3" />
+          </div>
+        </div>
+
+        <div class="controls">
+          <button id="enc" class="primary">Encrypt →</button>
+          <button id="dec" class="primary">← Decrypt</button>
+          <button id="brute" class="muted small">Brute-force</button>
+          <button id="freq" class="muted small">Phân tích tần suất</button>
+          <button id="clr" class="muted small">Xóa</button>
+        </div>
+
+        <div class="result-box">
+          <div class="title">Kết quả</div>
+          <div id="out" class="output" aria-live="polite"></div>
+        </div>
+
+        <div class="result-box">
+          <div class="title">Brute-force (k = 0..25)</div>
+          <div id="brlist" class="list"></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="title">Thông tin nhanh</div>
+        <div class="info">
+          • Không gian khóa = 26 (rất nhỏ).<br>
+          • Key=13 là ROT13 (tự nghịch đảo).<br>
+          • Phân tích tần suất giả định tiếng Anh (E phổ biến nhất).
+        </div>
+
+        <div class="result-box">
+          <div class="title">Phân tích tần suất (kết quả)</div>
+          <div id="freqout" class="info">Nhấn "Phân tích tần suất" để nhận gợi ý.</div>
+        </div>
+
+        <div class="result-box">
+          <div class="title">Ví dụ</div>
+          <div class="info">
+            Plain: HELLO, key=3 → Cipher: KHOOR<br>
+            Cipher: KHOOR, key=3 → Plain: HELLO
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>Caesar cipher — demo nhỏ.</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Playfair Cipher — Mã hoá & Giải mã</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Playfair Cipher</h1>
+    <p class="lead">Nhập khóa (key) và văn bản, chọn tùy chọn (J → I), sau đó Encrypt / Decrypt.</p>
+
+    <section class="card">
+      <label for="keyInput">Khóa (Key)</label>
+      <input id="keyInput" type="text" placeholder="Ví dụ: PLAYFAIR EXAMPLE" />
+
+      <div class="options">
+        <label><input id="mergeJ" type="checkbox" checked /> Hợp nhất J → I</label>
+        <label style="margin-left:12px;">Pad char: <input id="padChar" type="text" maxlength="1" value="X" style="width:36px; text-align:center;" /></label>
+      </div>
+
+      <label for="plainInput">Văn bản (Plaintext / Ciphertext)</label>
+      <textarea id="plainInput" placeholder="Nhập văn bản..."></textarea>
+
+      <div class="buttons">
+        <button id="buildBtn" class="muted small">Xây bảng từ key</button>
+        <button id="encryptBtn" class="primary">Encrypt →</button>
+        <button id="decryptBtn" class="primary">← Decrypt</button>
+        <button id="clearBtn" class="muted small">Xóa</button>
+      </div>
+
+      <div class="result">
+        <div class="title">Bảng 5×5 (từ khóa)</div>
+        <div id="matrix" class="matrix"></div>
+      </div>
+
+      <div class="result">
+        <div class="title">Tiền xử lý & Digraphs</div>
+        <pre id="prep" class="output"></pre>
+      </div>
+
+      <div class="result">
+        <div class="title">Kết quả</div>
+        <pre id="resultOut" class="output"></pre>
+      </div>
+    </section>
+
+    <section class="card info">
+      <h3>Thông tin</h3>
+      <ul>
+        <li>Luật mặc định: loại bỏ ký tự không phải chữ, viết hoa, thay J → I nếu đã chọn.</li>
+        <li>Nếu hai chữ trong một cặp trùng nhau, sẽ chèn ký tự pad giữa (mặc định X).</li>
+        <li>Khóa rỗng sẽ dùng bảng mặc định A..Z (loại J nếu hợp nhất).</li>
+      </ul>
+    </section>
+
+    <footer>Playfair cipher — demo cho Visual Studio Code</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
