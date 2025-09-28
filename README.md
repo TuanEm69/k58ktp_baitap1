@@ -62,13 +62,8 @@ Không gian khoá: 25 khoá (1–25).
 
 Phá mã: Thử toàn bộ 25 khoá (brute force).
 
-Ví dụ:
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7caa89b8-0e56-4c61-810c-c2768a226b83" />
 
-Nhập: HELLO, khoá = 3
-
-Mã hoá: KHOOR
-
-Giải mã: HELLO
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/00333eb2-a2b2-4095-8c47-cd4a4200b27e" />
 
@@ -121,13 +116,8 @@ Không gian khoá: ~312 khoá khả thi.
 
 Phá mã: Thử toàn bộ cặp (a, b) hoặc phân tích tần suất chữ.
 
-Ví dụ:
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/cf6672f0-6bbf-40f5-88c3-982e65f3e1e8" />
 
-Nhập: HELLO, a = 5, b = 8
-
-Mã hoá: RCLLA
-
-Giải mã: HELLO
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e5fde80c-5489-44aa-8251-c3dc8898b82c" />
 
@@ -141,19 +131,7 @@ Không gian khoá: n! (với n là số cột).
 
 Phá mã: Thử các hoán vị khác nhau, hoặc phân tích độ dài từ.
 
-Ví dụ:
-
-Nhập: HELLO, khoá = 3
-
-Viết vào bảng:
-
-H E L
-L O
-
-
-Mã hoá: HLOEL
-
-Giải mã: HELLO
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/a27b176c-936d-4498-8826-49a73b54e9a7" />
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/dbdb7d7a-420d-4a2c-8e0b-9af8d2cfb12a" />
 
@@ -232,13 +210,8 @@ Không gian khoá: 26^m (m = độ dài khoá).
 
 Phá mã: Phân tích tần suất, dùng phương pháp Kasiski hoặc Friedman.
 
-Ví dụ:
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/7fd9f197-e0d4-4cc9-a862-25cec7d430c9" />
 
-Nhập: HELLO, khoá = KEY
-
-Mã hoá: RIJVS
-
-Giải mã: HELLO
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/64bf0f9a-caac-48b0-b905-34f5071bb2b8" />
 
@@ -258,12 +231,7 @@ Không gian khoá: 25! (với 25 ký tự chữ cái, I/J gộp chung).
 
 Phá mã: Phân tích tần suất bigram (cặp chữ).
 
-Ví dụ:
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/0c5e677e-25c9-4ca8-8807-aee79efa4692" />
 
-Nhập: HELLO, khoá = PLAYFAIR
-
-Mã hoá: GCNNCB
-
-Giải mã: HELLO
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/5dd552ea-2ffd-4c79-b436-c3641b380625" />
