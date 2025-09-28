@@ -15,3 +15,5 @@
 3. Không gian khóa
 4. Cách phá mã (mà không cần khoá)
 5. Cài đặt thuật toán mã hoá và giải mã bằng code C++ và bằng html+css+javascript
+
+#### BÀI LÀM ####
